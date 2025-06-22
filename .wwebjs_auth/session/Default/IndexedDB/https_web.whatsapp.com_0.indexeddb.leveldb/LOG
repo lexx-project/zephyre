@@ -1,0 +1,6 @@
+2025/06/22-15:51:17.448 2a4c Reusing MANIFEST C:\Users\Administrator\Documents\tes coding\zepyhre\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/22-15:51:17.452 2a4c Recovering log #412
+2025/06/22-15:51:17.528 2a4c Reusing old log C:\Users\Administrator\Documents\tes coding\zepyhre\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000412.log 
+2025/06/22-15:51:17.529 2a4c Delete type=2 #410
+2025/06/22-15:51:17.529 2a4c Delete type=2 #413
+2025/06/22-15:51:24.196 37d4 Manual compaction at level-0 from '\x00\x96\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x97\x00\x00\x00' @ 0 : 0; will stop at (end)

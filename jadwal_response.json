@@ -1,0 +1,250 @@
+{
+  "status": "Success",
+  "code": 200,
+  "powered": "Powered By Maelyn API",
+  "result": [
+    {
+      "day": "Selasa",
+      "animeList": [
+        {
+          "anime_name": "Fate/strange Fake",
+          "cover": "https://i0.wp.com/cdn.myanimelist.net/images/anime/1724/136845.jpg"
+        },
+        {
+          "anime_name": "Aru Majo ga Shinu Made",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/03/148221.jpg"
+        },
+        {
+          "anime_name": "#Compass 2.0: Sentou Setsuri Kaiseki System",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148543.jpg"
+        },
+        {
+          "anime_name": "Maebashi Witches",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Maebashi-Witches.jpg"
+        },
+        {
+          "anime_name": "Shiunji-ke no Kodomotachi",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Shiunji-ke-no-Kodomotachi.jpg"
+        },
+        {
+          "anime_name": "Summer Pockets",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Otakudesu.io_MYAG-01_360p.jpg"
+        },
+        {
+          "anime_name": "Vigilante: Boku no Hero Academia Illegals",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148604.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Rabu",
+      "animeList": [
+        {
+          "anime_name": "Kimisen Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2024/07/Kimi-to-Boku-no-Saigo-no-Senjou-Aruiwa-Sekai-ga-Hajimaru-Seisen-Season-2.jpg"
+        },
+        {
+          "anime_name": "Saikyou no Ousama, Nidome no Jinsei wa Nani wo Suru?",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148299-1.jpg"
+        },
+        {
+          "anime_name": "Apocalypse Hotel",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148642.jpg"
+        },
+        {
+          "anime_name": "Kidou Senshi Gundam: GQuuuuuuX",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx185213-RKQN0qxKlqd6.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Kamis",
+      "animeList": [
+        {
+          "anime_name": "Ameku Takao no Suiri Karte",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/Ameku-Takao-no-Suiri-Karte.jpg"
+        },
+        {
+          "anime_name": "Kinoko Inu",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2024/10/Kinoko-Inu.jpg"
+        },
+        {
+          "anime_name": "Touhai: Ura Rate Mahjong Touhai Roku",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2024/10/145571.jpg"
+        },
+        {
+          "anime_name": "Yami Healer",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx175872-d55nfiC4WWHO.jpg"
+        },
+        {
+          "anime_name": "Kanpekisugite Kawaige ga Nai to Konyaku Haki sareta Seijo wa Ringoku ni Urareru",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx183275-WtAo77sYDFW8.png"
+        },
+        {
+          "anime_name": "Ninja to Koroshiya no Futarigurashi",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/146642.jpg"
+        },
+        {
+          "anime_name": "Uchuujin MuuMuu",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148096.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Jumat",
+      "animeList": [
+        {
+          "anime_name": "Around 40 Otoko no Isekai Tsuuhan",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/146512.jpg"
+        },
+        {
+          "anime_name": "BanG Dream! Ave Mujica",
+          "cover": "https://i0.wp.com/cdn.myanimelist.net/images/anime/1181/148235.jpg"
+        },
+        {
+          "anime_name": "Mecha-ude (TV)",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2024/10/127958.jpg"
+        },
+        {
+          "anime_name": "Bye Bye, Earth Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/147930.jpg"
+        },
+        {
+          "anime_name": "Danjo no Yuujou wa Seiritsu suru?",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148601.jpg"
+        },
+        {
+          "anime_name": "Rock wa Lady no Tashinami deshite",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Rock-wa-Lady-no-Tashinami-deshite.jpg"
+        },
+        {
+          "anime_name": "Wind Breaker Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148873.jpg"
+        },
+        {
+          "anime_name": "Senpai wa Otokonoko",
+          "cover": "https://i0.wp.com/cdn.myanimelist.net/images/anime/1049/144505.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Sabtu",
+      "animeList": [
+        {
+          "anime_name": "Astro Note",
+          "cover": "https://i0.wp.com/animekita.org/cover/141859.jpg"
+        },
+        {
+          "anime_name": "Kusuriya no Hitorigoto Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/144141l.jpg"
+        },
+        {
+          "anime_name": "Momentary Lily",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/143656.jpg"
+        },
+        {
+          "anime_name": "Enen no Shouboutai Season 3",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/146836.jpg"
+        },
+        {
+          "anime_name": "Guilty Gear Strive: Dual Rulers",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/147623.jpg"
+        },
+        {
+          "anime_name": "Katainaka no Ossan, Kensei ni Naru",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148148.jpg"
+        },
+        {
+          "anime_name": "Kowloon Generic Romance",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx182814-UTKRUUm7Jah5.jpg"
+        },
+        {
+          "anime_name": "Kuroshitsuji: Midori no Majo-hen",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148292.jpg"
+        },
+        {
+          "anime_name": "Nazotoki wa Dinner no Ato de",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx184989-9i29Wrdrak11.png"
+        },
+        {
+          "anime_name": "Shin Samurai-den Yaiba",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148242.jpg"
+        },
+        {
+          "anime_name": "Teogonia",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148358.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Minggu",
+      "animeList": [
+        {
+          "anime_name": "A-Rank Party wo Ridatsu shita Ore wa",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/146267.jpg"
+        },
+        {
+          "anime_name": "Anne Shirley",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx184639-tmj8NbTroNeI.jpg"
+        },
+        {
+          "anime_name": "Gorilla no Kami kara Kago sareta Reijou wa Ouritsu Kishidan de Kawaigarareru",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx182060-r0ihNqhiyvpT.jpg"
+        },
+        {
+          "anime_name": "Kanchigai no Atelier Meister",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/03/146126l.jpg"
+        },
+        {
+          "anime_name": "Lazarus",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx167336-KpGIIBie71OX.png"
+        },
+        {
+          "anime_name": "Nanatsu no Taizai: Mokushiroku no Yonkishi",
+          "cover": "https://i0.wp.com/animekita.org/cover/138530.jpg"
+        },
+        {
+          "anime_name": "Okinawa de Suki ni Natta Ko ga Hougen Sugite Tsurasugiru",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/146843.jpg"
+        },
+        {
+          "anime_name": "Shoushimin Series Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Shoushimin-Series-Season-2-Subtitle-Indonesia.jpg"
+        },
+        {
+          "anime_name": "Hibi wa Sugiredo Meshi Umashi",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Hibi-wa-Sugiredo-Meshi-Umashi.jpg"
+        },
+        {
+          "anime_name": "Mono",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148603.jpg"
+        },
+        {
+          "anime_name": "To Be Hero X",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/bx156092-yHqgQZOF2mbg.jpg"
+        },
+        {
+          "anime_name": "Uma Musume: Cinderella Gray",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/Uma-Musume-Cinderella-Gray.jpg"
+        }
+      ]
+    },
+    {
+      "day": "Senin",
+      "animeList": [
+        {
+          "anime_name": "Watashi no Shiawase na Kekkon Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/01/146770.jpg"
+        },
+        {
+          "anime_name": "Sentai Daishikkaku Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/147694.jpg"
+        },
+        {
+          "anime_name": "Aharen-san wa Hakarenai Season 2",
+          "cover": "https://i0.wp.com/otakudesu.cloud/wp-content/uploads/2025/04/148355.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -451,13 +451,7 @@ export default function EpisodePage({ params }: Props) {
         <div className="text-center py-16">
           <LoadingSpinner
             size="lg"
-            text={
-              <>
-                Sabar Gann....
-                <br />
-                Orang sabar di sayang Tuhan
-              </>
-            }
+            text="Sabar Gann.... Orang sabar di sayang Tuhan"
           />
         </div>
       </div>

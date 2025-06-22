@@ -143,7 +143,11 @@ export default function AnimeDetail({ slug }: Props) {
       }
     } catch (error) {
       console.error("Error sending report to WhatsApp:", error);
-      alert(`Error: ${error.message}`);
+      alert(
+        `Error: ${
+          error instanceof Error ? error.message : "Unknown error occurred"
+        }`
+      );
     } finally {
       setIsSubmittingReport(false);
       setShowReportModal(false);
@@ -707,7 +711,11 @@ export default function AnimeDetail({ slug }: Props) {
       window.location.href = episodePageUrl;
     } catch (error) {
       console.error("Error in handleEpisodeClick:", error);
-      alert(`Error: ${error.message}`);
+      alert(
+        `Error: ${
+          error instanceof Error ? error.message : "Unknown error occurred"
+        }`
+      );
     }
   };
 

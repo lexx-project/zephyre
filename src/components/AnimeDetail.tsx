@@ -84,6 +84,8 @@ export default function AnimeDetail({ slug }: Props) {
   const [reportMessage, setReportMessage] = useState("");
   const [isSubmittingReport, setIsSubmittingReport] = useState(false);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const episodesPerPage = 10;
 
   const handleReportError = () => {
     console.log("Report button clicked, showing modal");
@@ -465,6 +467,28 @@ export default function AnimeDetail({ slug }: Props) {
               };
             }) || [],
         };
+
+        // Sort episodes to ensure they start from episode 1 and go in order
+        if (detailData.episodeList && detailData.episodeList.length > 0) {
+          detailData.episodeList.sort((a, b) => {
+            // Extract episode numbers from episode titles
+            const getEpisodeNumber = (episode: string) => {
+              const match =
+                episode.match(/episode\s*(\d+)/i) || episode.match(/(\d+)/);
+              return match ? parseInt(match[1], 10) : 0;
+            };
+
+            const episodeA = getEpisodeNumber(a.episode);
+            const episodeB = getEpisodeNumber(b.episode);
+
+            return episodeA - episodeB;
+          });
+          console.log(
+            "Episodes sorted from 1 to",
+            detailData.episodeList.length
+          );
+        }
+
         console.log("=== FINAL PROCESSED DATA ===");
         console.log("Final detailData:", detailData);
         console.log("Final synopsis:", detailData.synopsis);
@@ -1214,33 +1238,118 @@ export default function AnimeDetail({ slug }: Props) {
               </div>
 
               {animeData?.episodeList && animeData.episodeList.length > 0 ? (
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-                  {animeData.episodeList.map((episode, index) => (
-                    <motion.button
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                <div>
+                  {/* Pagination Controls */}
+                  <div className="flex justify-between items-center mb-4">
+                    <button
                       onClick={() =>
-                        handleEpisodeClick(episode.url, episode.episode)
+                        setCurrentPage(Math.max(0, currentPage - 1))
                       }
-                      className={`bg-dark-700 hover:bg-primary-600 text-white p-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 ${
-                        selectedEpisode === episode.episode
-                          ? "border-primary-500 bg-primary-600"
-                          : "border-transparent hover:border-primary-500"
+                      disabled={currentPage === 0}
+                      className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                        currentPage === 0
+                          ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                          : "bg-primary-600 hover:bg-primary-700 text-white"
                       }`}
                     >
-                      <div className="flex items-center justify-center space-x-2">
-                        <PlayIcon className="w-5 h-5" />
-                        <span className="font-semibold">{episode.episode}</span>
-                      </div>
-                      {episode.date && (
-                        <p className="text-xs text-gray-400 mt-2">
-                          {episode.date}
-                        </p>
+                      ← Previous
+                    </button>
+                    <span className="text-gray-400">
+                      Page {currentPage + 1} of{" "}
+                      {Math.ceil(
+                        (animeData.episodeList?.length || 0) / episodesPerPage
                       )}
-                    </motion.button>
-                  ))}
+                    </span>
+                    <button
+                      onClick={() =>
+                        setCurrentPage(
+                          Math.min(
+                            Math.ceil(
+                              (animeData.episodeList?.length || 0) /
+                                episodesPerPage
+                            ) - 1,
+                            currentPage + 1
+                          )
+                        )
+                      }
+                      disabled={
+                        currentPage >=
+                        Math.ceil(
+                          (animeData.episodeList?.length || 0) / episodesPerPage
+                        ) -
+                          1
+                      }
+                      className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                        currentPage >=
+                        Math.ceil(
+                          (animeData.episodeList?.length || 0) / episodesPerPage
+                        ) -
+                          1
+                          ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                          : "bg-primary-600 hover:bg-primary-700 text-white"
+                      }`}
+                    >
+                      Next →
+                    </button>
+                  </div>
+
+                  {/* Episode List - Vertical Layout */}
+                  <div className="space-y-2">
+                    {animeData.episodeList
+                      .slice(
+                        currentPage * episodesPerPage,
+                        (currentPage + 1) * episodesPerPage
+                      )
+                      .map((episode, index) => {
+                        // Extract only the episode number from the episode title
+                        const getEpisodeNumber = (episodeTitle: string) => {
+                          // Remove anime name and extract just the number
+                          const match =
+                            episodeTitle.match(/episode\s*(\d+)/i) ||
+                            episodeTitle.match(/(\d+)/);
+                          return match
+                            ? match[1]
+                            : (
+                                currentPage * episodesPerPage +
+                                index +
+                                1
+                              ).toString();
+                        };
+
+                        const episodeNumber = getEpisodeNumber(episode.episode);
+
+                        return (
+                          <motion.button
+                            key={currentPage * episodesPerPage + index}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.05 }}
+                            onClick={() =>
+                              handleEpisodeClick(episode.url, episode.episode)
+                            }
+                            className={`w-full bg-dark-700 hover:bg-primary-600 text-white p-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl border-2 text-left ${
+                              selectedEpisode === episode.episode
+                                ? "border-primary-500 bg-primary-600"
+                                : "border-transparent hover:border-primary-500"
+                            }`}
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <PlayIcon className="w-5 h-5 text-primary-400" />
+                                <span className="font-semibold text-lg">
+                                  Episode {episodeNumber}
+                                </span>
+                              </div>
+                              {episode.date && (
+                                <span className="text-xs text-gray-400">
+                                  {episode.date}
+                                </span>
+                              )}
+                            </div>
+                          </motion.button>
+                        );
+                      })}
+                  </div>
                 </div>
               ) : (
                 <div className="text-center py-12">

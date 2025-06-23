@@ -592,63 +592,6 @@ export default function EpisodePage({ params }: Props) {
                       </select>
                     </div>
                   )}
-
-                {/* Download Button */}
-                {selectedStreamUrl && (
-                  <button
-                    onClick={async () => {
-                      try {
-                        // Use the original episode URL (slug) for download API
-                        const episodeUrl = decodeURIComponent(slug);
-                        const downloadConfig = apiConfig.DOWNLOAD(episodeUrl);
-
-                        const response = await fetch(
-                          downloadConfig.url,
-                          downloadConfig.options
-                        );
-
-                        if (!response.ok) {
-                          throw new Error(
-                            `Download failed: ${response.status}`
-                          );
-                        }
-
-                        const downloadData = await response.json();
-
-                        if (
-                          downloadData.status === "Success" &&
-                          downloadData.result
-                        ) {
-                          // Open download page in new tab
-                          window.open(
-                            downloadData.result.downloadUrl ||
-                              downloadData.result,
-                            "_blank"
-                          );
-                        } else {
-                          alert("Download tidak tersedia untuk episode ini");
-                        }
-                      } catch (error) {
-                        console.error("Download error:", error);
-                        alert("Terjadi kesalahan saat mengunduh video");
-                      }
-                    }}
-                    className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium text-sm flex items-center justify-center"
-                  >
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Download Video
-                  </button>
-                )}
               </div>
 
               {/* Stream Info */}

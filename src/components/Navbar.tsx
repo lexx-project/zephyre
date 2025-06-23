@@ -11,13 +11,18 @@ import {
   HomeIcon,
   CalendarIcon,
   FilmIcon,
-  CheckCircleIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
   { name: "Ongoing", href: "/ongoing", icon: FilmIcon },
-  { name: "Completed", href: "/completed", icon: CheckCircleIcon },
+  {
+    name: "Join Community",
+    href: "https://chat.whatsapp.com/G2S6UXOWn7h7Ci6FtQBPfP",
+    icon: UserGroupIcon,
+    external: true,
+  },
   { name: "Jadwal", href: "/jadwal", icon: CalendarIcon },
 ];
 
@@ -70,10 +75,31 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             {navigation.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.href;
+
+              if (item.external) {
+                return (
+                  <motion.div
+                    key={item.name}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 text-gray-300 hover:text-white hover:bg-dark-700"
+                    >
+                      <Icon className="w-4 h-4" />
+                      <span className="font-medium">{item.name}</span>
+                    </a>
+                  </motion.div>
+                );
+              }
+
               return (
                 <motion.div
                   key={item.name}
@@ -154,6 +180,24 @@ export default function Navbar() {
               {navigation.map((item) => {
                 const Icon = item.icon;
                 const isActive = pathname === item.href;
+
+                if (item.external) {
+                  return (
+                    <motion.div key={item.name} whileTap={{ scale: 0.95 }}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 text-gray-300 hover:text-white hover:bg-dark-700"
+                      >
+                        <Icon className="w-5 h-5" />
+                        <span className="font-medium">{item.name}</span>
+                      </a>
+                    </motion.div>
+                  );
+                }
+
                 return (
                   <motion.div key={item.name} whileTap={{ scale: 0.95 }}>
                     <Link

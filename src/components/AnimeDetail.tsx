@@ -1246,7 +1246,7 @@ export default function AnimeDetail({ slug }: Props) {
                         setCurrentPage(Math.max(0, currentPage - 1))
                       }
                       disabled={currentPage === 0}
-                      className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                      className={`px-2 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-all duration-200 ${
                         currentPage === 0
                           ? "bg-gray-600 text-gray-400 cursor-not-allowed"
                           : "bg-primary-600 hover:bg-primary-700 text-white"
@@ -1254,7 +1254,7 @@ export default function AnimeDetail({ slug }: Props) {
                     >
                       ← Previous
                     </button>
-                    <span className="text-gray-400">
+                    <span className="text-gray-400 text-sm sm:text-base">
                       Page {currentPage + 1} of{" "}
                       {Math.ceil(
                         (animeData.episodeList?.length || 0) / episodesPerPage
@@ -1279,7 +1279,7 @@ export default function AnimeDetail({ slug }: Props) {
                         ) -
                           1
                       }
-                      className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                      className={`px-2 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-all duration-200 ${
                         currentPage >=
                         Math.ceil(
                           (animeData.episodeList?.length || 0) / episodesPerPage
